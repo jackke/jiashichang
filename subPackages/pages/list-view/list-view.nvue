@@ -3,8 +3,8 @@
 		<custom-box titleName="详情列表">
 			
 		</custom-box>
-		<scroll-view ref="tabbar1" id="tab-bar" class="tab-bar" :scroll="false" :scroll-x="true" :show-scrollbar="false"
-			:scroll-into-view="scrollInto">
+		<!-- <scroll-view ref="tabbar1" id="tab-bar" class="tab-bar" :scroll="false" :scroll-x="true" :show-scrollbar="false"
+			:scroll-into-view="scrollInto"> -->
 			<!-- <view style="flex-direction: column;">
 				<view style="flex-direction: row;">
 					<view class="uni-tab-item" v-for="(tab,index) in tabList" :key="tab.id" :id="tab.id"
@@ -26,7 +26,7 @@
 			<swiper-item class="swiper-item" v-for="(page, index) in tabList" :key="index">
 				<swiper-page class="swiper-page" :pid="page.pageid" ref="page"></swiper-page>
 			</swiper-item> -->
-		</swiper>
+		<!-- </swiper> -->
 	</view>
 </template>
 

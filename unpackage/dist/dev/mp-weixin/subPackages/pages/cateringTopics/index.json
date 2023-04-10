@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "custom-box": "../../../components/custom-box/custom-box",
+    "title-name": "../../../components/title-name/title-name",
+    "card-box": "../../../components/card-box/card-box",
+    "echart-box": "../../../components/echart-box/echart-box",
+    "title-view": "../../../components/title-view/title-view"
+  }
+}

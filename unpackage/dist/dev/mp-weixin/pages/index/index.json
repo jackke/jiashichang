@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "uni-app",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "custom-box": "../../components/custom-box/custom-box",
+    "list-card": "../../components/list-card/list-card",
+    "nav-tab-bar": "../../components/nav-tab-bar/nav-tab-bar"
+  }
+}

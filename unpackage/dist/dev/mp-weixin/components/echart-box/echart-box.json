@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "vue3-echarts": "../vue3-echarts/vue3-echarts"
+  }
+}

@@ -20,15 +20,14 @@
 					"navigationBarTitleText": "",
 					"enablePullDownRefresh": false
 				}
+			},{
+				"path" : "pages/list-view/list-view",
+				"style" : { // 详情页面
+					"navigationBarTitleText": "",
+					"enablePullDownRefresh": false
+				}
 			}
-		    ,{
-                    "path" : "list-view/list-view",
-                    "style" : {
-                    "navigationBarTitleText": "nvue-swiper"
-                }
-                
-                }
-            ]
+		]
 	}],
 	// 分包预载配置
 	"preloadRule": {

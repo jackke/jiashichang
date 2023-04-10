@@ -1,0 +1,1 @@
+<view class="tab-box"><view wx:for="{{a}}" wx:for-item="item" wx:key="d" class="{{item.c}}" bindtap="{{item.e}}"><view class="{{item.a}}"></view><view class="" style="margin-top:10rpx">{{item.b}}</view></view></view>

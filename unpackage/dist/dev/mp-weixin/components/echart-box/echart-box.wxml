@@ -1,0 +1,1 @@
+<view class="echart" disable-scroll="true"><vue3-echarts wx:if="{{c}}" class="echart r" u-r="echarts" bindclick="{{b}}" u-i="93745148-0" bind:__l="__l" u-p="{{c}}"></vue3-echarts></view>

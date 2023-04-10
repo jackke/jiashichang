@@ -1,0 +1,1 @@
+<view class="custom-top"><view wx:if="{{a}}" class="default"><view class="iconfont icon-l-jiantou" bindtap="{{b}}"></view><view class="title">{{c}}</view><view class=""></view></view><slot name="tab-nav"></slot><slot></slot></view>
