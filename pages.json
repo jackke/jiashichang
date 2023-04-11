@@ -10,7 +10,16 @@
 				// }
 			}
 		}
-	],
+	    ,{
+            "path" : "pages/login/login",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	//分包加载配置，此配置为小程序的分包加载机制。
 	"subPackages": [{
 		"root": "subPackages", //子包的根目录

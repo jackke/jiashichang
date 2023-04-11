@@ -1,5 +1,5 @@
 // let dev = 'uat'
-let dev = ''
+let dev = 'uat'
 const common = {
   apihost: 'https://cbzs.crehopson.com/cockpit'
 }

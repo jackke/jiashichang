@@ -35,6 +35,7 @@ const _sfc_main = {
     let item_kl = common_vendor.ref(itemData);
     let item_sum = common_vendor.ref(itemData);
     let sxDate = common_vendor.ref("2023-01-01 ~ 2023-04-10");
+    let pickerDate = common_vendor.ref("2023-04-10");
     common_vendor.ref();
     let lableProp = common_vendor.ref([
       { label: "时段类型", prop: "ppmemo", style: "width:20%;padding-left: 8rpx;" },
@@ -69,7 +70,7 @@ const _sfc_main = {
         mucode: 201,
         pageNo: 1,
         pageSize: 20,
-        jzdate: "2023-03-30"
+        jzdate: pickerDate.value
       };
       common_vendor.index.$https.getHttp(url, data).then((res) => {
         let item = res.data[0] || {};
@@ -110,9 +111,11 @@ const _sfc_main = {
     const onProjectLyMessage = () => {
       let url = "/biz/project-zyly-mohoShopBusiness";
       let data = {
+        project_code: "SH_JAXM",
         mucode: params.mucode,
         pageNo: 1,
-        pageSize: 10
+        pageSize: 10,
+        jzdate: pickerDate.value
       };
       common_vendor.index.$https.getHttp(url, data).then((res) => {
         console.log(res, "头部信息");
@@ -173,7 +176,7 @@ const _sfc_main = {
         mucode: 201,
         pageNo: 1,
         pageSize: 20,
-        jzdate: "2023-03-30"
+        jzdate: pickerDate.value
       };
       common_vendor.index.$https.getHttp(url, data).then((res) => {
         let arr = res.data || [];
@@ -209,6 +212,13 @@ const _sfc_main = {
         tView1.value.initData(arr);
       });
     };
+    const onPickerDate = (val) => {
+      pickerDate.value = val.detail.value;
+      onProjectLyMessage();
+      onMohoShopBusiness();
+      onMohoModityQs();
+      onMohoModityQwqklb();
+    };
     const listView = () => {
       common_vendor.index.navigateTo({
         url: "/subPackages/pages/list-view/list-view"
@@ -219,48 +229,51 @@ const _sfc_main = {
         a: common_vendor.p({
           titleName: "餐饮项目"
         }),
-        b: common_vendor.p({
+        b: common_vendor.t(common_vendor.unref(pickerDate)),
+        c: common_vendor.unref(pickerDate),
+        d: common_vendor.o(onPickerDate),
+        e: common_vendor.p({
           title: "经营情况"
         }),
-        c: common_vendor.p({
+        f: common_vendor.p({
           itemData: common_vendor.unref(item_xs)
         }),
-        d: common_vendor.o(listView),
-        e: common_vendor.p({
+        g: common_vendor.o(listView),
+        h: common_vendor.p({
           itemData: common_vendor.unref(item_mxs)
         }),
-        f: common_vendor.p({
+        i: common_vendor.p({
           itemData: common_vendor.unref(item_kl)
         }),
-        g: common_vendor.t(common_vendor.unref(sxDate)),
-        h: common_vendor.p({
+        j: common_vendor.t(common_vendor.unref(sxDate)),
+        k: common_vendor.p({
           itemData: common_vendor.unref(item_sum)
         }),
-        i: common_vendor.sr(echartRef, "08f950b9-6", {
+        l: common_vendor.sr(echartRef, "08f950b9-6", {
           "k": "echartRef"
         }),
-        j: common_vendor.p({
+        m: common_vendor.p({
           canvasId: "ec-chart1"
         }),
-        k: common_vendor.p({
+        n: common_vendor.p({
           title: "时段分析"
         }),
-        l: common_vendor.sr(echartRef2, "08f950b9-8", {
+        o: common_vendor.sr(echartRef2, "08f950b9-8", {
           "k": "echartRef2"
         }),
-        m: common_vendor.p({
+        p: common_vendor.p({
           canvasId: "ec-chart2"
         }),
-        n: common_vendor.sr(echartRef3, "08f950b9-9", {
+        q: common_vendor.sr(echartRef3, "08f950b9-9", {
           "k": "echartRef3"
         }),
-        o: common_vendor.p({
+        r: common_vendor.p({
           canvasId: "ec-chart3"
         }),
-        p: common_vendor.sr(tView1, "08f950b9-10", {
+        s: common_vendor.sr(tView1, "08f950b9-10", {
           "k": "tView1"
         }),
-        q: common_vendor.p({
+        t: common_vendor.p({
           propList: common_vendor.unref(lableProp)
         })
       };

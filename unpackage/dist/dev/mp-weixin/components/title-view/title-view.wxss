@@ -33,7 +33,7 @@
   align-items: center;
   font-size: 24rpx;
   color: #6D7275;
-  background: rgba(236, 236, 236, 0.21);
+  background: #ececec;
   height: 72rpx;
   line-height: 72rpx;
   border-top: 1rpx solid #E2E2E2;

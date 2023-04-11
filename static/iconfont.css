@@ -5,4 +5,52 @@
        url('https://at.alicdn.com/t/c/font_3984217_acwc8u8hv8f.woff?t=1680256396099') format('woff'),
        url('https://at.alicdn.com/t/c/font_3984217_acwc8u8hv8f.ttf?t=1680256396099') format('truetype');
 }
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 30rpx;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
+.icon-delete:before {
+  content: '\e619';
+  /*删除*/
+}
+
+.icon-l-jiantou:before {
+	content: '\e651';
+	/* 左箭头 */
+}
+.icon-r-jiantou:before{
+	content: '\e664';
+	/* 右箭头 */
+}
+.icon-xiangmu:before{
+	content: '\e7f7';
+	/* 项目 */
+}
+.icon-ribao:before{
+	content: '\e64e';
+	/* 日报 */
+}
+.icon-yuebao:before{
+	content: '\e80d';
+	/* 月报 */
+}
+.icon-nianbao:before{
+	content: '\e66e';
+	/* 年报 */
+}
+
+/* &#xe651;
+更多
+&#xe664;
+项目
+&#xe7f7;
+日报
+&#xe64e;
+年报
+&#xe66e;
+月报
+&#xe80d; */

@@ -5,7 +5,7 @@
 			<view class="title">{{titleName}}</view>
 			<view class=""> </view>
 		</view>
-		<slot name="tab-nav"></slot>
+		<slot name="tab-nav" ></slot>
 		<slot></slot>
 		<!-- <view :class="customIndex == index ? 'custom-nav action' : 'custom-nav'" v-for="(item,index) in customNav" @click="onCustomNav(item, index)">{{item.functionName}} </view> -->
 	</view>
@@ -36,13 +36,14 @@
 		background-color: $uni-color3;
 		/* background-size: 100% 100%; */
 		display: flex;
+		flex-direction: column;
 		align-items: flex-end;
 		// padding-left: 20rpx;
 		.default{
 			width: 100%;
 			display: flex;
 			justify-content: space-between;
-			margin-bottom: 4%;
+			margin-top: 110rpx;
 			view{
 				flex: 1;
 				text-align: center;

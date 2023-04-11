@@ -5,6 +5,7 @@ const utils_http = require("./utils/http.js");
 require("./utils/config.js");
 if (!Math) {
   "./pages/index/index.js";
+  "./pages/login/login.js";
   "./subPackages/pages/cateringTopics/index.js";
   "./subPackages/pages/list-view/list-view.js";
 }

@@ -4,8 +4,8 @@
 		<custom-box titleName="餐饮项目"></custom-box>
 		<view class="flex-b tab-name">
 			<view class="title-name">北京朝阳合生汇</view>
-			<picker mode="date">
-				<view class="picker-date"> 2023-09-09</view>
+			<picker mode="date" :value="pickerDate" @change="onPickerDate">
+				<view class="picker-date">{{pickerDate}}</view>
 			</picker>
 		</view>
 		<view class="flex-b top-num">
@@ -85,7 +85,8 @@
 	let item_kl = ref(itemData)
 	let item_sum = ref(itemData)
 	let sxDate = ref('2023-01-01 ~ 2023-04-10')
-	let lableData = ref()
+	let pickerDate = ref('2023-04-10')
+	let headData = ref()
 	let lableProp = ref([
 		{label: '时段类型', prop: 'ppmemo', style:'width:20%;padding-left: 8rpx;'},
 		{label: '笔数', prop: 'xssr'},
@@ -130,7 +131,7 @@
 			mucode: 201,
 			pageNo: 1,
 			pageSize: 20,
-			jzdate: "2023-03-30"
+			jzdate: pickerDate.value
 		}
 		uni.$https.getHttp(url, data).then(res => {
 			// var item_xs = reactive({}); // 销售
@@ -178,12 +179,15 @@
 	const onProjectLyMessage = () => {
 		let url = '/biz/project-zyly-mohoShopBusiness'
 		let data = {
+			project_code: "SH_JAXM",
 			mucode: params.mucode,
 			pageNo: 1,
 			pageSize: 10,
+			jzdate: pickerDate.value
 		}
 		uni.$https.getHttp(url, data).then(res => {
 			console.log(res, '头部信息')
+			
 		})
 	}
 	// 图表echart 数据 柱状图
@@ -250,7 +254,7 @@
 			mucode: 201,
 			pageNo: 1,
 			pageSize: 20,
-			jzdate: "2023-03-30"
+			jzdate: pickerDate.value
 		}
 		uni.$https.getHttp(url, data).then(res => {
 			// console.log(res, '饼状图')
@@ -291,6 +295,13 @@
 			// 表格
 			tView1.value.initData(arr)
 		})
+	}
+	const onPickerDate = (val) => {
+		pickerDate.value = val.detail.value
+		onProjectLyMessage()
+		onMohoShopBusiness()
+		onMohoModityQs()
+		onMohoModityQwqklb()
 	}
 	// 跳转页面
 	const listView = () => {

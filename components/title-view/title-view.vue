@@ -3,7 +3,6 @@
 	<!-- <table-view dataList="{{project_lable_data}}" propList="{{project_lable_prop}}" class="table-content" columnsProp="project_name"></table-view> -->
 	<!-- 外部table组件 -->
 	<view class="table-box">
-	  <view>
 	    <view class="table-header" :style="headStyle">
 	      <view v-for="(xItem, yindex) in xList"  :key="yindex" :style="(xItem.style ? 'flex:none;': '') + (xItem.style || '')">
 	        <text>{{xItem.label}}</text>
@@ -41,8 +40,6 @@
 	        </view>
 	      </view>
 	    </view>
-	  </view>
-	
 	</view>
 </template>
 
@@ -162,7 +159,7 @@
   align-items: center;
   font-size: 24rpx;
   color: #6D7275;
-  background: rgba(236, 236, 236, 0.21);
+  background: rgba(236, 236, 236, 1);
   height: 72rpx;
   line-height: 72rpx;
   border-top: 1rpx solid #E2E2E2;

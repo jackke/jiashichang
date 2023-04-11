@@ -7,7 +7,9 @@
 		<!-- 自定义 头部 -->
 		<custom-box>
 			<slot name="tab-nav">
-				<view :class="customIndex == index ? 'custom-nav action' : 'custom-nav'" v-for="(item,index) in customNav" @click="onCustomNav(item, index)">{{item.functionName}} </view>
+				<view style="display: flex; width: 100%;margin-top: 80rpx;">
+					<view :class="customIndex == index ? 'custom-nav action' : 'custom-nav'" v-for="(item,index) in customNav" @click="onCustomNav(item, index)">{{item.functionName}} </view>
+				</view>
 			</slot>
 		</custom-box>
 		
@@ -46,7 +48,14 @@
 			}
 		},
 		onLoad() {
-			this.userLogin()
+			// #ifdef MP-WEIXIN
+				this.userLogin()
+			// #endif
+			// #ifdef H5
+			uni.navigateTo({
+				url:'/pages/login/login'
+			})
+			// #endif
 		},
 		methods: {
 			// 登录
